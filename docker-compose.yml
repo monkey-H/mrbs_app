@@ -1,0 +1,14 @@
+web:
+  image: docker.iwanna.xyz:5000/apache2:v1
+  commands: '/bin/bash -c "/etc/init.d/apache2 start && /usr/sbin/sshd -D'
+  links:
+    - db
+  ports:
+    - 80
+db:
+  image: docker.iwanna.xyz:5000/hmonkey/mysql:v1
+  ports:
+    - 3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=admin
+  container_name: db 
