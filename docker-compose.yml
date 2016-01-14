@@ -1,6 +1,6 @@
 web:
   image: docker.iwanna.xyz:5000/apache2:v1
-  commands: '/bin/bash -c "/etc/init.d/apache2 start && /usr/sbin/sshd -D'
+  command: '/bin/bash -c "/etc/init.d/apache2 start && /usr/sbin/sshd -D'
   links:
     - db
   ports:
