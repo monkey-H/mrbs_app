@@ -6,7 +6,7 @@ web:
   ports:
     - 80
 db:
-  image: docker.iwanna.xyz:5000/hmonkey/mysql:v1
+  image: docker.iwanna.xyz:5000/user_mysql:v1
   ports:
     - 3306
   environment:
